@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ToDo List</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="backdrop"></div>
+
+  <main class="card">
+    <header class="card__head">
+      <div class="card__title">
+        <span class="card__mark">✓</span>
+        <div>
+          <h1>Мої завдання</h1>
+          <p id="subtitle" class="card__sub">Завантаження…</p>
+        </div>
+      </div>
+      <div id="ring" class="ring" style="--p: 0">
+        <span id="ring-label">0%</span>
+      </div>
+    </header>
+
+    <form id="task-form" class="composer" autocomplete="off">
+      <input
+        id="task-input"
+        class="composer__input"
+        type="text"
+        placeholder="Додати нове завдання…"
+        maxlength="200"
+        required
+      />
+      <button class="composer__btn" type="submit" aria-label="Додати">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+          <path d="M12 5v14M5 12h14" />
+        </svg>
+      </button>
+    </form>
+
+    <nav class="tabs" aria-label="Фільтри">
+      <button class="tabs__item is-active" data-filter="all">Усі</button>
+      <button class="tabs__item" data-filter="active">Активні</button>
+      <button class="tabs__item" data-filter="done">Виконані</button>
+    </nav>
+
+    <p id="error" class="error" role="alert" hidden></p>
+
+    <ul id="task-list" class="list"></ul>
+
+    <footer class="card__foot">
+      <span id="counter" class="counter">—</span>
+      <button id="clear-done" class="ghost" type="button">Очистити виконані</button>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

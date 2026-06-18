@@ -1,0 +1,14 @@
+node_modules/
+
+todo.db
+todo.db-journal
+todo.db-wal
+todo.db-shm
+
+*.log
+npm-debug.log*
+
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
