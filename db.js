@@ -1,9 +1,9 @@
-import { DatabaseSync } from "node:sqlite";
+import Database from "better-sqlite3";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const db = new DatabaseSync(path.join(__dirname, "todo.db"));
+const db = new Database(path.join(__dirname, "todo.db"));
 
 db.exec(`
   CREATE TABLE IF NOT EXISTS tasks (

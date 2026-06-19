@@ -15,7 +15,7 @@
 
 - **Frontend:** HTML, CSS, ванільний JavaScript (без фреймворків)
 - **Backend:** Node.js + Express, REST API
-- **База даних:** SQLite (вбудований модуль `node:sqlite`), файл `todo.db`
+- **База даних:** SQLite (бібліотека `better-sqlite3`), файл `todo.db`
   створюється автоматично біля сервера
 
 ## Структура
@@ -32,6 +32,16 @@ kurs_ai/
     └── app.js
 ```
 
+## Запуск
+
+Потрібен [Node.js](https://nodejs.org/) версії 18 або новіше.
+
+```bash
+npm install
+npm start
+```
+
+Після запуску відкрийте у браузері: <http://localhost:3000>
 
 ## REST API
 
